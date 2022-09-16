@@ -12,20 +12,24 @@ let gameActive = true;
 let currentPlayer =xPlayer;
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
-
+//winner
 const winningMessage = () => `Player ${currentPlayer===xPlayer?"xPlayer":"oPlayer"} has won!`;
 const drawMessage = () => `Game ended in a draw!`;
+// player round
 const currentPlayerTurn = () => `It's ${currentPlayer===xPlayer?"xPlayer":"oPlayer"}'s turn`;
 
 statusDisplay.innerHTML = currentPlayerTurn();
 
 const winningConditions = [
+    //row
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
+    // column
     [0, 3, 6],
     [1, 4, 7],
     [2, 5, 8],
+    //
     [0, 4, 8],
     [2, 4, 6]
 ];

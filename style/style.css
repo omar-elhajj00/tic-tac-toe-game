@@ -34,7 +34,7 @@ section {
 
 .game--status {
     font-size: 50px;
-    color: #d7a62f;
+    color: #005ac0;
     margin: 20px auto;
 }
 
@@ -49,5 +49,13 @@ section {
     border-radius: 2rem;
 }
 .red-player{
-    
+
+    width:70px;
+    height: 100%;
+}
+
+.yellow-player{
+
+    width:70px;
+    height: 100%;
 }

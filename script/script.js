@@ -48,11 +48,12 @@ function handleCellPlayed(clickedCell, clickedCellIndex) {
     clickedCell.append(x);
 }
 
+//display the player status
 function handlePlayerChange() {
     currentPlayer = currentPlayer === xPlayer ? oPlayer : xPlayer;
     statusDisplay.innerHTML = currentPlayerTurn();
 }
-
+//game process
 function handleResultValidation() {
     let roundWon = false;
     for (let i = 0; i <= 7; i++) {
@@ -68,7 +69,7 @@ function handleResultValidation() {
             break
         }
     }
-
+    //winner
     if (roundWon) {
         statusDisplay.innerHTML = winningMessage();
         gameActive = false;
@@ -96,7 +97,7 @@ function handleCellClick(clickedCellEvent) {
     handleCellPlayed(clickedCell, clickedCellIndex);
     handleResultValidation();
 }
-
+//restart
 function handleRestartGame() {
     gameActive = true;
     currentPlayer = xPlayer;
